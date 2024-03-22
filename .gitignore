@@ -25,7 +25,7 @@ recipes_app/static
 /recipes_app/media/
 /static/
 
-
+.xml
 .idea
 .env
 .venv
