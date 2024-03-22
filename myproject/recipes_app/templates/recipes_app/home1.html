@@ -4,8 +4,8 @@
     <h2 class="title_h2">Популярные рецепты</h2>
     <ul class="top_recipe">
     {% for recipe in recipes %}
-         <li class="recipe">
-            <a class="recipe_text" href="/recipes/{{ recipe.id }}/">{{ recipe.title }}</a>
+        <li class="recipe">
+            <p class="recipe_text" href="/recipes/{{ recipe.id }}/">{{ recipe.title }}</p>
             <img class="recipe_image" src="{{ recipe.image.url }}" alt="{{ recipe.title }}">
         </li>
     {% endfor %}
