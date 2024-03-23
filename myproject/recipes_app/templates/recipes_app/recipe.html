@@ -4,13 +4,14 @@
        {% for category in recipe.categories.all %}
         <h2 class="recipe_text_category">{{ category.name }}</h2>
     {% endfor %}
-<h2 class="title_text_name">{{ recipe.title }}</h2>
+
 </div>
+    <h2 class="title_text_name">{{ recipe.title }}</h2>
     <h3>Описание: {{ recipe.description|linebreaks }}</h3>
     <h3>Автор: {{ recipe.author }}</h3>
     <h3>Время приготовления: {{ recipe.preparation_time }} минут</h3>
 <div class="recipe_show" >
-    <h2 class="step_title">Шаги приготовления: </h2>
+    <h2 class="step_title">Шаги приготовления </h2>
         <div class="step">
             <p class="step_recipe">{{ recipe.preparation_steps|linebreaks }}</p>
         </div>
