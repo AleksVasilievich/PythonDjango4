@@ -4,7 +4,6 @@
        {% for category in recipe.categories.all %}
         <h2 class="recipe_text_category">{{ category.name }}</h2>
     {% endfor %}
-
 </div>
     <h2 class="title_text_name">{{ recipe.title }}</h2>
     <h3>Описание: {{ recipe.description|linebreaks }}</h3>
