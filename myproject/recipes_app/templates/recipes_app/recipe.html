@@ -1,18 +1,22 @@
 {% extends 'recipes_app/base.html' %}
 {% block content %}
-<h2>{{ recipe.title }}</h2>
-<h3>Описание: {{ recipe.description|linebreaks }}</h3>
-<h2>Шаги приготовления: </h2>
-<div class="step">
-<p class="step_recipe">{{ recipe.preparation_steps|linebreaks }}</p>
-</div>
-<h3>Время приготовления: {{ recipe.preparation_time }} минут</h3>
-<h3>Автор: {{ recipe.author }}</h3>
-<img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" style="max-width: 50%; height: auto; width: auto">
-<ul>
-    {% for category in recipe.categories.all %}
-    <li class="recipe">{{ category.name }}</li>
+<div class="category_title_name">
+       {% for category in recipe.categories.all %}
+        <h2 class="recipe_text_category">{{ category.name }}</h2>
     {% endfor %}
-</ul>
+<h2 class="title_text_name">{{ recipe.title }}</h2>
+</div>
+    <h3>Описание: {{ recipe.description|linebreaks }}</h3>
+    <h3>Автор: {{ recipe.author }}</h3>
+    <h3>Время приготовления: {{ recipe.preparation_time }} минут</h3>
+<div class="recipe_show" >
+    <h2 class="step_title">Шаги приготовления: </h2>
+        <div class="step">
+            <p class="step_recipe">{{ recipe.preparation_steps|linebreaks }}</p>
+        </div>
+    <img class="recipe_image" src="{{ recipe.image.url }}" alt="{{ recipe.title }}" >
+</div>
+
+
 {% endblock %}
 
