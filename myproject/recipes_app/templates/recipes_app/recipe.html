@@ -10,8 +10,9 @@
     <h3>Автор: {{ recipe.author }}</h3>
     <h3>Время приготовления: {{ recipe.preparation_time }} минут</h3>
 <div class="recipe_show" >
-    <h2 class="step_title">Шаги приготовления </h2>
+
         <div class="step">
+             <h2 class="step_title">Шаги приготовления </h2>
             <p class="step_recipe">{{ recipe.preparation_steps|linebreaks }}</p>
         </div>
     <img class="recipe_image" src="{{ recipe.image.url }}" alt="{{ recipe.title }}" >
