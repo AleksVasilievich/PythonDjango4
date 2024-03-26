@@ -1,0 +1,15 @@
+/* Reset CSS */
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.form{
+    font-family: Arial, sans-serif;
+}

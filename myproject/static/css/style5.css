@@ -1,0 +1,241 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9edd2a6;
+    max-width: 100%;
+}
+
+header {
+    background-color: #131417;
+    padding: 20px;
+    text-align:right;
+}
+
+h1.title {
+    margin: 0;
+    color:#fff;
+}
+
+.title {
+    background-color: #444857;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 50px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 30px #572a2a;
+    text-shadow: 0px 3px 10px #000;
+    -webkit-transition: all 0.5s ease;
+}
+
+.title_h2 {
+    font-size: 30px;
+    color: #2465b9;
+    margin-bottom: 20px;
+    padding: 10px;
+    letter-spacing: 30px;
+    text-shadow: 1px 1px 1px #333;
+    text-align: center;
+    font-weight: bold;
+}
+
+.top_recipe {
+    padding: 0;
+}
+
+.recipe {
+    background-color: #fff;
+    font-size: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px #572a2a;
+    margin: 3%;
+}
+
+.recipe:hover {
+    background-color: #a32f2f;
+    color: #e6dada;
+    box-shadow: 0px 0px 30px #2bff00;
+    -webkit-transition: all 0.5s ease;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.recipe_text {
+    margin: 10%;
+    background-color: #f2ecec;
+    color: #253237;
+    padding: 2%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px #572a2a;
+    width: 30%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 300%;
+    order: 1;
+}
+
+.recipe_text:hover {
+    background-color: #a32f2f;
+    color: #e6dada;
+    box-shadow: 0px 0px 30px #2bff00;
+    -webkit-transition: all 0.5s ease;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.recipe_image {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 5);
+    padding: 5px;
+}
+
+.category_title_name {
+    display: flex;
+    font-size: 20px;
+    color: #333;
+    color: #630c0c;
+    margin-bottom: 0;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 50px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    justify-content: space-around;
+}
+
+.recipe_text_category {
+    letter-spacing : 10px;
+    color: #1f7085;
+    text-shadow: 2px 2px 1px #333;
+}
+
+.title_text_name {
+    font-size: 200%;
+    color: #bd7979;
+    text-shadow: 2px 2px 1px #333;
+}
+
+.recipe_show {
+    display: none;
+    background-color: #fff;
+    font-size: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px #572a2a;
+    margin: 3%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 100%;
+}
+
+h2.step_title {
+    font-variant: cursive;
+    letter-spacing: 0.05em;
+    font-size: 1.5em;
+    color:#0aa897;
+    text-shadow: 1px 1px 1px #333;
+
+}
+
+.step {
+    color:#03071f;
+    text-align: center;
+    text-decoration: none;
+    font-size: 100%;
+    padding: 70px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px #572a2a;
+    margin: 3%;
+    text-align: justify;
+    text-align-last: left;
+}
+
+.step_recipe {
+    text-align: justify;
+    text-align-last: left;
+}
+
+h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.recipe_text {
+    font-size: 200%;
+    letter-spacing : 1px;
+    text-shadow: 1px 1px 1px #092345;
+    color: #3636b8;
+}
+
+nav {
+    margin-top: 30px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+    letter-spacing: 2px;
+    padding: 5px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+nav a:hover {
+    background-color: #27486a;
+    color: #e5edee;
+    border-radius: 3px;
+    box-shadow: 5px 5px 5px #2bff00;
+    -webkit-transition: all 0.5s ease;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+nav a:visited {
+    color: #f2eded;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+a.footer {
+    color: #fff;
+}
+
+a.footer_up {
+    color: #fff;
+    background: #276a6a;
+    border-radius: 3px;
+}
+
+a.footer_up:hover {
+    color: #fff;
+    background: #276a6a;
+    box-shadow: 5px 5px 5px #2bff00;
+    }
