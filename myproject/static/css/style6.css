@@ -33,11 +33,11 @@ h1.title {
 }
 
 .title_h2 {
-    font-size: 2vw;
+    font-size: 2.2vw;
     color: #2465b9;
     margin-bottom: 20px;
     padding: 10px;
-    letter-spacing: 30px;
+    letter-spacing: 1vw;
     text-shadow: 1px 1px 1px #333;
     text-align: center;
     font-weight: bold;
@@ -79,7 +79,7 @@ h1.title {
     max-width: 300px;
     text-align: center;
     text-decoration: none;
-    font-size: 3vw;
+    font-size: 1.5vw;
     order: 1;
     position: relative;
     transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
@@ -190,15 +190,8 @@ h1.title {
 }
 
 h3 {
-    font-size: 1.5vw;
+    font-size: 1.1vw;
     color: #333;
-}
-
-.recipe_text {
-    font-size: 200%;
-    letter-spacing : 1px;
-    text-shadow: 1px 1px 1px #092345;
-    color: #4d5de9;
 }
 
 nav {
