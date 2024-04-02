@@ -78,9 +78,9 @@
 ]
 - добавим директорию для статики на сервере
 - STATIC_URL = '/static/'
-- STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+- STATIC_PATH = '/static/'
 - MEDIA_URL = 'media/'
-- MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+- MEDIA_ROOT = BASE_DIR / 'media'
 - подготовим базу данных на сервере
 - пропишем в настройках адрес хоста к базе данных ,имя пользователя, имя базы данных
 - DATABASES = {
@@ -110,11 +110,11 @@ utf8_general_ci;
 - Сохраняем изменения 
 - Создаём новый пустой репозиторий
 - Соединяем локальный и удалённый репозиторий
-- git remote add origin https://github.com/AleksVasilievich/PythonDjango2.git
+- git remote add origin https://github.com/AleksVasilievich/PythonDjango4.git
 - git branch -M main
 - git push -u origin main
 ##### Переходим на сайт pythonanywhere, открываем консоль и клонируем репозиторий
-- git clone https://github.com/myusername/myproject.git
+- git clone https://github.com/AleksVasilievich/PythonDjango4.git
 ##### Настройка проекта на сервере
 - После завершения клонирования остаёмся в консоли, запускаем команду на создание виртуального окружения:
 - mkvirtualenv --python=/usr/bin/python3.10 virtualenv
@@ -127,6 +127,50 @@ utf8_general_ci;
 ##### Не закрывая консоль устанавливаем необходимые пакеты:
 - cd myproject
 - pip install -r requirements.txt
-##### Создаём веб-приложение
+##### Создаём и настраиваем веб-приложение
+- Настройки веб-приложения
+- В первую очередь находим раздел Virtualenv и указываем путь до созданного нами окружения:
+- /home/username/.virtualenvs/virtualenv
+- Теперь отредактируем wsgi файл, ссылка на который находится в разделе Code
+- В файле находим раздел Django (примерно 74-90 строки) 
+- Указываем свои данные:
+- import os
+- import sys
+- from dotenv import load_dotenv
+- project_folder = os.path.expanduser('~/PythonDjango4/myproject/')
+- load_dotenv(os.path.join(project_folder, '.env'))
+- path = '/home/sprig/PythonDjango4/myproject'
+- if path not in sys.path:
+-    sys.path.append(path)
+- os.environ['DJANGO_SETTINGS_MODULE'] = 'myproject.settings'
+- from django.core.wsgi import get_wsgi_application
+- application = get_wsgi_application()
+##### Сохраним “секреты” в окружении
+- Для начала создадим секретный ключ. Для этого в консоли запускаем
+- интерпретатор Python и воспользуемся функцией token_hex из модуля secrets
+- >>> import secrets
+- >>> secrets.token_hex()
+- 'Здесь Получаем Ваш безопасный пароль'
+- >>> exit()
+##### Выполняем команды добавления “секретов”:
+- (virtualenv) 12:01~/myproject (master)$ echo "export
+- SECRET_KEY=Ваш безопасный пароль" >> .env
+- (virtualenv) 12:01 ~/myproject (master)$ echo "export MYSQL_PASSWORD=Ваш пароль" >> .env
+- научим консоль работать с “секретами”. Введём команду
+- echo 'set -a; source ~/myproject/.env; set +a' >>
+- ~/.virtualenvs/virtualenv/bin/postactivate
+##### Далее применяем миграции к базе данных:
+- python manage.py migrate 
+##### Раздача статики сервером
+-  Соберём статические файлы проекта и приложений в одном месте. Для этого выполним команду:
+- python manage.py collectstatic
+##### Создаём суперпользователя, чтобы получить доступ к административной панели.
+- Открваем консоль и выполняем команду:
+- python manage.py createsuperuser
+- Финальный раз перезагружаем сервер. Переходим в админ панель, проверяем
+- логин и пароль, радуемся успешному развёртыванию проекта в облаке.
+
+
+
 
 
